@@ -1,1 +1,52 @@
+button {
+    background-color: ghostwhite;
+    border: none;
+    z-index: 2;
+    position: relative;
+}
+button:hover {
+    background-color: cornflowerblue;
+    color: white;
+    transition: 2s;
+}
 
+#article {
+    position: absolute;
+    z-index: 1;
+    width: 45%;
+    text-align: center;
+    margin-top: 550px;
+    margin-left: 17%;
+    color: white;
+}
+
+#article h1 {
+    text-align: left;
+}
+
+#picture {
+    position: relative;
+    z-index: 0;
+}
+
+article:hover > div {
+    animation-name: vacation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+article:hover > img {
+    animation-name: image;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes vacation {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-550px)}
+}
+
+@keyframes image {
+    from { filter: none; }
+    to { filter: brightness(75%);}
+}
